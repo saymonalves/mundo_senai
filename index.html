@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Teste seus conhecimentos com nosso quiz de curiosidades.">
+  <title>Quiz Mania | Teste seus conhecimentos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="logo">Quiz<span>Mania</span></a>
+    <span class="tag">DESAFIE SUA MENTE</span>
+  </header>
+
+  <main class="container">
+    <section class="intro" id="intro">
+      <div class="icon-circle">🧠</div>
+      <p class="eyebrow">É HORA DO DESAFIO</p>
+      <h1>Quanto você<br><span>realmente sabe?</span></h1>
+      <p class="description">
+        Responda às perguntas, acumule pontos e descubra
+        se você é um verdadeiro mestre das curiosidades.
+      </p>
+
+      <div class="features">
+        <div>🎯 <strong>10 perguntas</strong></div>
+        <div>⏱️ <strong>15 segundos por pergunta</strong></div>
+        <div>🏆 <strong>Ranking de pontos</strong></div>
+      </div>
+
+      <button class="btn btn-primary" id="startBtn">
+        Começar o quiz <span>→</span>
+      </button>
+      <p class="small-text">Gratuito • Divertido • Para todos</p>
+    </section>
+
+    <section class="quiz-card hidden" id="quiz">
+      <div class="quiz-top">
+        <span class="category" id="category">CONHECIMENTOS GERAIS</span>
+        <div class="timer" id="timer">⏱️ 15s</div>
+      </div>
+
+      <div class="progress-info">
+        <span id="questionCount">Pergunta 1 de 10</span>
+        <span id="scoreLabel">0 pontos</span>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress"></div>
+      </div>
+
+      <h2 id="question">Carregando pergunta...</h2>
+
+      <div class="answers" id="answers"></div>
+
+      <p class="feedback" id="feedback" aria-live="polite"></p>
+
+      <button class="btn btn-primary hidden" id="nextBtn">
+        Próxima pergunta →
+      </button>
+    </section>
+
+    <section class="result-card hidden" id="result">
+      <div class="result-icon" id="resultIcon">🏆</div>
+      <p class="eyebrow">DESAFIO CONCLUÍDO</p>
+      <h1 id="resultTitle">Mandou bem!</h1>
+      <p class="description" id="resultMessage"></p>
+
+      <div class="score-box">
+        <span>Sua pontuação</span>
+        <strong id="finalScore">0/100</strong>
+        <div class="progress-bar">
+          <div class="progress-fill" id="finalProgress"></div>
+        </div>
+        <p id="correctCount">0 de 10 respostas corretas</p>
+      </div>
+
+      <button class="btn btn-primary" id="restartBtn">
+        Jogar novamente ↻
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feito para quem gosta de aprender e se divertir. ✨</p>
+  </footer>
+</body>
+</html>
